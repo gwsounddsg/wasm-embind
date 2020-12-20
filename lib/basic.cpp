@@ -11,6 +11,6 @@ void myPrint() {
 
 #ifdef __EMSCRIPTEN__
 EMSCRIPTEN_BINDINGS(basicModule) {
-    function("myPrint", &myPrint);
+    emscripten::function("myPrint", &myPrint);
 }
 #endif
