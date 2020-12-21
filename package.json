@@ -10,7 +10,8 @@
         "build": "emcc --bind -o lib/basic.js lib/basic.cpp",
         "test": "jest",
         "dev:server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
-        "dev:bundler": "webpack -w --mode=development"
+        "dev:bundler": "webpack -w --mode=development",
+        "start": "concurrently \"npm run dev:server\" \"npm run dev:bundler\""
     },
     "keywords": [],
     "author": "",
@@ -21,6 +22,7 @@
         "@babel/preset-env": "^7.12.11",
         "@babel/preset-react": "^7.12.10",
         "babel-loader": "^8.2.2",
+        "concurrently": "^5.3.0",
         "express": "^4.17.1",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
