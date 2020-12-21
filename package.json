@@ -7,7 +7,10 @@
         "lib": "lib"
     },
     "scripts": {
-        "build": "emcc --bind -o lib/basic.js lib/basic.cpp"
+        "build": "emcc --bind -o lib/basic.js lib/basic.cpp",
+        "test": "jest",
+        "dev:server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+        "dev:bundler": "webpack -w --mode=development"
     },
     "keywords": [],
     "author": "",
